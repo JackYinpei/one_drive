@@ -64,7 +64,7 @@ func Init(filepath string) (err error) {
 
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
-		fmt.Println("Config file changed")
+		fmt.Println("Config file changed", in)
 		if err := viper.Unmarshal(Conf); err != nil {
 			fmt.Println("viper unmarshal falied", err)
 		}
