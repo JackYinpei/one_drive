@@ -1,4 +1,4 @@
-package mysql
+package dao
 
 import (
 	"golang.org/x/crypto/bcrypt"

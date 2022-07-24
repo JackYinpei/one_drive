@@ -1,0 +1,11 @@
+{"level":"INFO","time":"2022-07-20T20:11:19.579+0800","caller":"logger/logger.go:43","msg":"init logger success"}
+{"level":"INFO","time":"2022-07-20T20:12:51.582+0800","caller":"logger/logger.go:43","msg":"init logger success"}
+{"level":"INFO","time":"2022-07-20T20:14:11.581+0800","caller":"logger/logger.go:43","msg":"init logger success"}
+{"level":"INFO","time":"2022-07-20T20:14:55.141+0800","caller":"logger/logger.go:76","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-20T20:14:55.779+0800","caller":"logger/logger.go:76","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","time":"2022-07-20T20:15:01.273+0800","caller":"logger/logger.go:76","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36","errors":"","cost":0.0010308}
+{"level":"INFO","time":"2022-07-20T20:32:00.448+0800","caller":"logger/logger.go:43","msg":"init logger success"}
+{"level":"PANIC","time":"2022-07-20T20:32:00.457+0800","caller":"mysql/init.go:36","msg":"mysql lost"}
+{"level":"INFO","time":"2022-07-20T20:33:06.082+0800","caller":"logger/logger.go:43","msg":"init logger success"}
+{"level":"PANIC","time":"2022-07-20T20:33:06.087+0800","caller":"mysql/init.go:36","msg":"mysql lost"}
+{"level":"INFO","time":"2022-07-20T20:35:40.329+0800","caller":"logger/logger.go:43","msg":"init logger success"}

@@ -1,6 +1,7 @@
-package mysql
+package dao
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"qqq_one_drive/setting"
@@ -14,7 +15,8 @@ import (
 
 var DB *gorm.DB
 
-func Databases(connString string) {
+func Databases(conn *setting.MySQLConfig) {
+	connString := fmt.Sprintf("%s:%s@tcp(127.0.0.1:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", conn.User, conn.Password, conn.Port, conn.DB)
 	// 初始化GORM日志配置
 	newLogger := logger.New(
 		log.New(os.Stdout, "\r\n", log.LstdFlags), // io writer

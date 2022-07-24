@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	dao "qqq_one_drive/dao/mysql"
 	"qqq_one_drive/logger"
 	"qqq_one_drive/setting"
 
@@ -24,15 +25,15 @@ func main() {
 		fmt.Printf("init logger failed, err:%v\n", err)
 		return
 	}
+
+	// TODO 数据库链接
+	dao.Databases(setting.Conf.MySQLConfig)
+
 	gin.SetMode(setting.Conf.Mode)
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 	r.LoadHTMLFiles("./pages/index.html")
 	r.Static("/static", "./static")
-	// r := gin.Default()
-	// r.LoadHTMLFiles("./pages/index.html")
-	// r.GET("/hello", controller.GetIndex)
-	// r.Run()
 
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
@@ -41,4 +42,5 @@ func main() {
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
+	r.Run(":8080")
 }

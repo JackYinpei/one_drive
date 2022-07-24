@@ -19,6 +19,7 @@ import (
 var log *zap.Logger
 
 func Init(cfg *setting.LogConfig, mode string) (err error) {
+	println(cfg.Filename, cfg.MaxSize, cfg.MaxBackups, cfg.MaxAge, "setting config")
 	writeSyncer := getLogWriter(cfg.Filename, cfg.MaxSize, cfg.MaxBackups, cfg.MaxAge)
 	encoder := getEncoder()
 	var l = new(zapcore.Level)
