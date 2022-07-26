@@ -18,6 +18,7 @@ type Note struct {
 	gorm.Model
 	Context string
 	NoteID  int64 `gorm:"unique"`
+	Tag     string
 }
 
 const (
