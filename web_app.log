@@ -69,3 +69,4 @@
 {"level":"INFO","time":"2022-07-26T20:51:26.356+0800","caller":"logger/logger.go:43","msg":"init logger success"}
 {"level":"ERROR","time":"2022-07-26T20:51:34.995+0800","caller":"api/note.go:21","msg":"绑定前端信息失败，错误信息是","error":"invalid character 't' looking for beginning of object key string"}
 {"level":"ERROR","time":"2022-07-26T20:53:37.699+0800","caller":"api/note.go:21","msg":"绑定前端信息失败，错误信息是","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2022-07-27T21:24:42.104+0800","caller":"logger/logger.go:43","msg":"init logger success"}

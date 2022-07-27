@@ -25,3 +25,25 @@ func (Note *Note) PostNote(noteID int64) controller.ResCode {
 	}
 	return controller.ResCode(200)
 }
+
+type GetNote struct {
+	Bottom int32 `form:"bottom" json:"bottom"`
+	Top    int32 `from:"top" json:"top"`
+}
+
+func (GetNote *GetNote) GetNoteLogic() controller.ResponseData {
+	notes := make([]dao.Note, 20)
+	if err := dao.DB.Order("updated_at").Find(&notes).Error; err != nil {
+		zap.L().Error("根据updated时间查询note 失败了")
+		return controller.ResponseData{
+			Code: 200,
+			Msg:  "查询失败",
+			Data: err,
+		}
+	}
+	return controller.ResponseData{
+		Code: 200,
+		Msg:  "OK",
+		Data: notes,
+	}
+}

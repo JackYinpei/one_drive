@@ -60,6 +60,7 @@ func main() {
 			c.JSON(200, "你妈的， 登录成功")
 		})
 		afterLogin.POST("/note", api.PostNote)
+		afterLogin.GET("/note", api.GetNote)
 	}
 	r.Run(":8080")
 }

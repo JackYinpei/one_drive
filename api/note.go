@@ -25,3 +25,9 @@ func PostNote(c *gin.Context) {
 		})
 	}
 }
+
+func GetNote(c *gin.Context) {
+	var getNote logic.GetNote
+	resData := getNote.GetNoteLogic()
+	c.JSON(200, resData.Data)
+}
