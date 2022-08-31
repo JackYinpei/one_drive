@@ -7,5 +7,19 @@
 <body>
     <h1>我的第一个标题</h1>
     <p>我的第一个段落。</p>
+    <p>{{ .data }}</p>
+    <p id="Token">{{.data.Token}}</p>
+    <button @click=""></button>
 </body>
+
+<script>
+
+    const AA = document.querySelector('#Token').innerHTML
+    console.log(AA);
+    localStorage.setItem("token", AA)
+    
+    axios.post('url',params{
+        token:
+    })
+</script>
 </html>
